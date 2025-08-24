@@ -1,0 +1,62 @@
+{
+  "examples": {
+    "aws_s3": {
+      "s3": {
+        "region": "us-east-1",
+        "bucket": "my-backup-bucket",
+        "accessKeyId": "YOUR_ACCESS_KEY_ID",
+        "secretAccessKey": "YOUR_SECRET_ACCESS_KEY"
+      }
+    },
+    "digitalocean_spaces": {
+      "s3": {
+        "region": "nyc3",
+        "bucket": "my-backup-space",
+        "accessKeyId": "YOUR_SPACES_KEY",
+        "secretAccessKey": "YOUR_SPACES_SECRET",
+        "endpoint": "https://nyc3.digitaloceanspaces.com",
+        "forcePathStyle": false
+      }
+    },
+    "wasabi": {
+      "s3": {
+        "region": "us-east-1",
+        "bucket": "my-backup-bucket",
+        "accessKeyId": "YOUR_WASABI_KEY",
+        "secretAccessKey": "YOUR_WASABI_SECRET",
+        "endpoint": "https://s3.wasabisys.com",
+        "forcePathStyle": false
+      }
+    },
+    "backblaze_b2": {
+      "s3": {
+        "region": "us-west-004",
+        "bucket": "my-backup-bucket",
+        "accessKeyId": "YOUR_B2_KEY_ID",
+        "secretAccessKey": "YOUR_B2_APPLICATION_KEY",
+        "endpoint": "https://s3.us-west-004.backblazeb2.com",
+        "forcePathStyle": false
+      }
+    },
+    "minio_self_hosted": {
+      "s3": {
+        "region": "us-east-1",
+        "bucket": "backup-bucket",
+        "accessKeyId": "minioadmin",
+        "secretAccessKey": "minioadmin",
+        "endpoint": "http://localhost:9000",
+        "forcePathStyle": true
+      }
+    },
+    "cloudflare_r2": {
+      "s3": {
+        "region": "auto",
+        "bucket": "my-backup-bucket",
+        "accessKeyId": "YOUR_R2_ACCESS_KEY_ID",
+        "secretAccessKey": "YOUR_R2_SECRET_ACCESS_KEY",
+        "endpoint": "https://YOUR_ACCOUNT_ID.r2.cloudflarestorage.com",
+        "forcePathStyle": false
+      }
+    }
+  }
+}

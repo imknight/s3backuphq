@@ -1,0 +1,24 @@
+{
+  "name": "backup-to-s3",
+  "version": "1.0.0",
+  "description": "Configurable backup tool for directories and MySQL/MariaDB databases to S3",
+  "main": "src/index.js",
+  "bin": {
+    "backup-to-s3": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["backup", "s3", "mysql", "mariadb", "directories"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.658.0",
+    "@aws-sdk/lib-storage": "^3.658.0",
+    "commander": "^12.1.0",
+    "archiver": "^7.0.1",
+    "joi": "^17.13.3",
+    "winston": "^3.14.2"
+  }
+}

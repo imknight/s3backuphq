@@ -1,0 +1,68 @@
+{
+  "project": {
+    "name": "my-project"
+  },
+  "s3": {
+    "region": "us-east-1",
+    "bucket": "my-backup-bucket",
+    "accessKeyId": "YOUR_ACCESS_KEY_ID",
+    "secretAccessKey": "YOUR_SECRET_ACCESS_KEY",
+    "endpoint": "https://s3.amazonaws.com",
+    "forcePathStyle": false,
+    "signatureVersion": "v4"
+  },
+  "directories": [
+    {
+      "name": "web-assets",
+      "path": "/var/www/html",
+      "exclude": ["node_modules", "*.log", "tmp/*"]
+    },
+    {
+      "name": "user-uploads",
+      "path": "/uploads",
+      "exclude": []
+    }
+  ],
+  "databases": [
+    {
+      "name": "mysql-db",
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "backup_user",
+      "password": "backup_password",
+      "database": "my_database",
+      "charset": "utf8mb4"
+    },
+    {
+      "name": "mariadb-db",
+      "type": "mariadb",
+      "host": "localhost",
+      "port": 3306,
+      "username": "backup_user",
+      "password": "mariadb_password",
+      "database": "my_mariadb_database",
+      "charset": "utf8mb4"
+    },
+    {
+      "name": "local-mysql",
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "root",
+      "password": "",
+      "database": "test_database",
+      "charset": "utf8mb4"
+    }
+  ],
+  "backup": {
+    "schedule": "0 2 * * *",
+    "retention": {
+      "daily": 7,
+      "weekly": 4,
+      "monthly": 12
+    },
+    "compression": true,
+    "timestamp": true
+  }
+}
